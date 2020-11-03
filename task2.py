@@ -38,8 +38,7 @@ signMenu2=tk.OptionMenu(win,buttonvar2,cs2a,cs2b)
 def factor():
     sign1=buttonvar1.get()
     sign2=buttonvar2.get()
-    print(sign2)
-    print(sign1)
+    
 
     b=int(b2.get())
     if sign1=="('-',)":
@@ -48,8 +47,7 @@ def factor():
     c=int(c2.get())
     if sign2=="('-',)":
         c=c*-1
-    print(b)
-    print(c)
+    
     x1=(((-1 * b) + math.sqrt(b**2 - (4 * 1 * c)))/2)
     x2=(((-1 * b) - math.sqrt(b**2 - (4 * 1 * c)))/2)
 
