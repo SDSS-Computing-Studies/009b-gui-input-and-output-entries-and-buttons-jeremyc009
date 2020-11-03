@@ -23,6 +23,10 @@ wordlist2=[]
 wordtype.set(wordlist[0])
 count=0
 
+def displayMadLib():
+    output.set('A vacation is when you take a trip to some '+wordlist2[0]+' place with your '+wordlist2[1]+' family. Usually you go to some place\n that is near a/an '+wordlist2[2]+' or up on a/an '+wordlist2[3]+'.\n A good vacation place is one where you can ride '+wordlist2[4]+'\n or play '+wordlist2[5]+' or go hunting for '+wordlist2[6]+' . I like\n to spend my time '+wordlist2[7]+' or '+wordlist2[8]+'.\n When parents go on a vacation, they spend their time eating\n three '+wordlist2[9]+' a day, and fathers play golf, and mothers\n sit around '+wordlist2[10]+'. Last summer, my little brother\n fell in a/an '+wordlist2[11]+' and got poison '+wordlist2[12]+' all\n over his '+wordlist2[13]+'. My family is going to go to (the)\n '+wordlist2[14]+', and I will practice '+wordlist2[15]+'. Parents\n need vacations more than kids because parents are always very\n '+wordlist2[16]+' and because they have to work '+wordlist2[17]+'\n hours every day all year making enough '+wordlist2[18]+' to pay\n for the vacation.')
+
+
 def wordEntry():
     global count
     word=e1.get()
@@ -31,14 +35,17 @@ def wordEntry():
     e1.delete(0,END)
     
     count=count+1
-    wordtype.set(wordlist[count])
-    print(wordlist2)
-    length=len(wordlist2)
-    if length==18:
+    if count==19:
+        print(len(wordlist2))
         displayMadLib()
+        count=0
 
-def displayMadLib():
-    output.set('A vacation is when you take a trip to some'+wordlist2[0]+' place with your'+wordlist2[1]+'family. Usually you go to some place\n that is near a/an '+wordlist2[2]+' or up on a/an '+wordlist2[3]+'.\n A good vacation place is one where you can ride '+wordlist2[4]+'\n or play '+wordlist2[5]+' or go hunting for '+wordlist2[6]+' . I like\n to spend my time '+wordlist2[7]+' or '+wordlist2[8]+'.\n When parents go on a vacation, they spend their time eating\n three '+wordlist2[9]+' a day, and fathers play golf, and mothers\n sit around '+wordlist2[10]+'. Last summer, my little brother\n fell in a/an '+wordlist2[11]+' and got poison '+wordlist2[12]+' all\n over his'+wordlist2[13]+'. My family is going to go to (the)\n '+wordlist2[14]+', and I will practice '+wordlist2[15]+'. Parents\n need vacations more than kids because parents are always very\n '+wordlist2[16]+' and because they have to work'+wordlist2[17]+'\n hours every day all year making enough '+wordlist2[18]+' to pay\n for the vacation.')
+    
+    wordtype.set(wordlist[count])
+    
+    length=len(wordlist2)
+    
+
 
 
 
@@ -50,5 +57,6 @@ l1.grid(row=2,column=1)
 e1.grid(row=2,column=2)
 wtype.grid(row=1,column=2)
 button1.grid(row=3,column=2)
+l2.grid(row=5,column=1,columnspan=2)
 win.mainloop()
     
